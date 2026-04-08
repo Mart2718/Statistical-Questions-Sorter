@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=DM+Serif+Display&family=DM+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "DM Serif Display", serif;
+  --font-mono: "DM Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-navy: #0e1f38;
+  --color-navy-mid: #1a3352;
+  --color-teal: #065f46;
+  --color-teal-light: #ecfdf5;
+  --color-coral: #991b1b;
+  --color-coral-light: #fef2f2;
+  --color-gold: #854d0e;
+  --color-gold-light: #fefce8;
+  --color-bg: #f5f2ec;
+  --color-surface: #ffffff;
+  --color-text: #0e1f38;
+  --color-text-dim: #334155;
+  --color-text-muted: #475569;
+  --color-border: #cbd5e1;
+
+  --radius-xl: 20px;
+  --radius-sm: 10px;
+
+  --shadow-soft: 0 4px 24px rgba(14, 31, 56, 0.10);
+  --shadow-heavy: 0 12px 48px rgba(14, 31, 56, 0.16);
+}
+
+@layer base {
+  body {
+    @apply bg-bg text-text font-sans min-h-screen selection:bg-teal/20;
+  }
+
+  /* Dot grid background */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: radial-gradient(circle, #c5d3e2 1px, transparent 1px);
+    background-size: 28px 28px;
+    opacity: 0.35;
+    pointer-events: none;
+    z-index: 0;
+  }
+}

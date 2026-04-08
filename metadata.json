@@ -1,0 +1,5 @@
+{
+  "name": "Statistical Question Sorter",
+  "description": "An interactive learning tool for STAT C1000 to master the difference between statistical and non-statistical questions.",
+  "requestFramePermissions": []
+}
